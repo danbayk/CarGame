@@ -13,7 +13,11 @@ public class SetupLocalPlayer : NetworkBehaviour {
         if (isLocalPlayer)
         {
             GetComponent<Drive>().enabled = true;
+            Camera.main.transform.position = transform.up * 0.6f;
+            //Camera.main.transform.LookAt(this.transform.position);
+            //Camera.main.transform.parent = this.transform;
         }
+        
 	}
 	
 	// Update is called once per frame
